@@ -1,7 +1,8 @@
 import { Handler } from "express";
 import { sign } from "../lib";
 import { TRepository } from "../types/shared.type";
-import { TCreateUser, TUser } from "../db/pg/schema";
+import { TCreateUser, TUser } from "../types";
+
 
 export const signUp = (repo: TRepository<[TCreateUser], TUser[]>): Handler => (req, res, next) => {
     try {
